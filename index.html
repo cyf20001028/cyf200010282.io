@@ -1,28 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Hank Quinlan, Horrible Cop</title>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/cv">CV</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <div class="blurb">
-                <h1>Hi there, I'm Hank Quinlan!</h1>
-                <p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-            </div><!-- /.blurb -->
-        </div><!-- /.container -->
-        <footer>
-            <ul>
-                <li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-                <li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-            </ul>
-        </footer>
-    </body>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>疫情防控调查表</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!-- 最新 Bootstrap 核心 CSS 文件 -->
+<link rel ="stylesheet" type="text/css" href="./main/bootstrap/css/bootstrap-theme.min.css" />
+<link rel ="stylesheet" type="text/css" href="./main/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+</head>
+<body ng-app="App" ng-controller="mainController" class="ng-scope">
+<div class="cat_add">
+	<div class="cat_add_header">
+	    <div class="icon"></div>
+	    <div class="title">居民疫情期间出行调查</div>
+	</div>
+	<div class="cat_add_form">
+	    <form class="form-horizontal" method="post" action="#" enctype="multipart/form-data">
+	        <input type="hidden" name="id" value="233" />
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">姓名</label>
+                <div class="col-md-3">
+                    <input class="form-control input-lg" type="text" name="cat_add" value="" placeholder="请输入文章标识" />
+                </div>
+                <span class="glyphicon glyphicon-asterisk star"></span>
+                <label class="explain">输入汉字字体，不能为英文字符</label>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">身份证号</label>
+                <div class="col-md-3">
+                    <input class="form-control input-lg" type="text" name="cat_add" value="" placeholder="请输入文章标题" />
+                </div>
+                <span class="glyphicon glyphicon-asterisk star"></span>
+                <label class="explain">输入数字及英文字符</label>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">性别</label>
+                <div class="col-md-3">
+					<label class="checkbox-inline" style="margin-left:-34px;width:81px;">
+				       <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked>男
+				    </label>
+				    <label class="checkbox-inline" style="width:81px;">
+				       <input type="radio" name="optionsRadiosinline" id="optionsRadios4" value="option2">女
+				    </label>
+                </div>
+                <span class="glyphicon glyphicon-asterisk star"></span>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">头像照片</label>
+                <div class="col-md-3">
+                      <input class="file" style="margin-left:-15px" name="goods_img" size="160x95"  rate="0.8" type="text" value="" />
+                      <input type="hidden" name="old_goods_img" value="" />
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">所在省市</label>
+                <div class="col-md-3">
+                    <select class="form-control input-lg" id="cat_id" name="cat_id" style="margin-left:-15px;margin-top: 5px;">
+                        <option value="">省/市</option>
+                        <option value="1">省1</option>
+                        <option value="1">省2</option>
+                        <option value="1">省3</option>
+                        <option value="1">省4</option>
+                        <option value="1">省5</option>
+                        <option value="1">市1</option>
+                        <option value="1">市2</option>
+                        <option value="1">市2</option>
+                    </select> 
+                </div>
+                <span class="glyphicon glyphicon-asterisk star"></span>
+                <label class="explain">必须为当前居住地</label>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">所在县</label>
+                <div class="col-md-3">
+                    <select class="form-control input-lg" id="cat_id" name="cat_id" style="margin-left:-15px;margin-top: 5px;">
+                        <option value="">请选择</option>
+                        <option value="1">县1</option>
+                        <option value="1">县2</option>
+                        <option value="1">县3</option>
+                        <option value="1">县4</option>
+                        <option value="1">县5</option>
+                        <option value="1">县6</option>
+                    </select> 
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">近半月是否有出行</label>
+                <div class="col-md-3">
+                    <label class="checkbox-inline" style="margin-left:-34px;width:81px;">
+                       <input type="radio" name="optionsRadiosinline1" id="optionsRadios5" value="option1" checked>是
+                    </label>
+                    <label class="checkbox-inline" style="width:81px;">
+                       <input type="radio" name="optionsRadiosinline1" id="optionsRadios6" value="option2">否
+                    </label>
+                </div>
+                <span class="glyphicon glyphicon-asterisk star"></span>
+                <label class="explain">填写否，则以下信息可以不填</label>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">近日身体是否有异样</label>
+                <div class="col-md-3">
+                    <label class="checkbox-inline" style="margin-left:-34px;width:81px;">
+                       <input type="radio" name="optionsRadiosinline2" id="optionsRadios7" value="option1" checked>是
+                    </label>
+                    <label class="checkbox-inline" style="width:81px;">
+                       <input type="radio" name="optionsRadiosinline2" id="optionsRadios8" value="option2">否
+                    </label>
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">请填写最近有待过的地方</label>
+                <div class="col-md-3">
+                    <input class="form-control input-lg" type="text" name="cat_add" value="" placeholder="用空格分开" />
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">出行路径</label>
+                <div class="col-md-3">
+                    <textarea class="form-control" rows="5" name="cat_add" placeholder="最多填写300字，最少填写一个字" style="margin-left: -17px;"></textarea>
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">交通工具班次、航班、车牌号</label>
+                <div class="col-md-3">
+                    <textarea class="form-control" rows="5" name="cat_add" placeholder="最多300字，最少一个字" style="margin-left: -17px;"></textarea>
+                </div>
+                <span class="glyphicon glyphicon-asterisk star"></span>
+                <label class="explain" style="margin-top: 52px;">如k633、g522846、注明发车时间及下车时间</label>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">是否接触过确诊或疑似病例</label>
+                <div class="col-md-3">
+                    <label class="checkbox-inline" style="margin-left:-34px;width:81px;">
+                       <input type="radio" name="optionsRadiosinline3" id="optionsRadios3" value="option1" checked>是
+                    </label>
+                    <label class="checkbox-inline" style="width:81px;">
+                       <input type="radio" name="optionsRadiosinline3" id="optionsRadios4" value="option2">否
+                    </label>
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">本人目前状态</label>
+                <div class="col-md-3">
+                    <label class="checkbox-inline" style="margin-left: -34;width:34px;">
+                       <input type="radio" name="optionsRadiosinline4" id="optionsRadios3" value="option1" checked>有可疑症状
+                    </label>
+                    <label class="checkbox-inline" style="width:34px;">
+                       <input type="radio" name="optionsRadiosinline4" id="optionsRadios4" value="option2">疑似
+                    </label>
+                    <label class="checkbox-inline" style="width:34px;">
+                        <input type="radio" name="optionsRadiosinline4" id="optionsRadios4" value="option2">治愈
+                     </label>
+                     <label class="checkbox-inline" style="width:34px;">
+                        <input type="radio" name="optionsRadiosinline4" id="optionsRadios4" value="option2">无以上状态
+                     </label>
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">本人目前状态处理</label>
+                <div class="col-md-3">
+                    <label class="checkbox-inline" style="width:81px;">
+                       <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked>正常休息
+                    </label>
+                    <label class="checkbox-inline" style="width:81px;">
+                       <input type="radio" name="optionsRadiosinline" id="optionsRadios4" value="option2">隔离治疗
+                    </label>
+                    <label class="checkbox-inline" style="width:81px;">
+                        <input type="radio" name="optionsRadiosinline" id="optionsRadios4" value="option2">已治愈
+                     </label>
+                </div>
+            </div>
+            <div class="form-group form-group-sm">
+                <label class="control-label col-md-1">其它说明</label>
+                <div class="col-md-3">
+                    <textarea class="form-control" rows="5" name="cat_add" placeholder="如对此次疫情的看法" style="margin-left: -17px;"></textarea>
+                </div>
+            </div>
+        	<div class="form-group form-group-sm" style="margin-top: 30px;">
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="btn-group">
+                        <button style="margin-right: 15px;" type="button" class="btn btn-default btn-sm" onclick="history.back()" title="返回"><i class="glyphicon glyphicon-chevron-left"></i> 返回</button>
+                        <button type="submit" class="btn btn-danger btn-sm" title="添加"><i class="glyphicon glyphicon-floppy-save"></i> 添加</button>
+                    </div>
+                </div>
+            </div>
+	    </form>
+	</div>
+    
+</div>
+</body>
 </html>
