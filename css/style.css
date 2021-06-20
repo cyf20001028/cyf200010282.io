@@ -8,6 +8,10 @@ body {
 	font-size: 14px;
 	font-family: "微软雅黑",Helvetica,Tahoma,Arial,sans-serif
 }
+main{
+	color:black;
+	background: cornsilk;
+}
 /* 分类 */
 .cat {width: 100%;margin: 0px 5px;}
 .cat>.cat_header{line-height: 40px;width: 80%;border-bottom: solid 1px #CDCDCD;padding: 6px 0px;}
